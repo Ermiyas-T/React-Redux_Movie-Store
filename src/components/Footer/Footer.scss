@@ -1,0 +1,31 @@
+@use "../../common/colors.scss" as *;
+
+.footer {
+  background-color: $secondary-color;
+  color: $font-primary;
+  height: 100px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+  border-top: 2px solid $font-primary;
+
+  div {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+      color: $font-secondary;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 100px;
+    padding: 1rem;
+  }
+}

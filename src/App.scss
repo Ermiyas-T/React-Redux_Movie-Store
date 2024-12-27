@@ -1,0 +1,17 @@
+@use "../src/common/colors.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: $primary-color;
+}
+.div {
+  height: 100vh;
+}

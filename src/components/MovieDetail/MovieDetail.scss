@@ -1,0 +1,123 @@
+@use "../../common/colors.scss" as *;
+
+.movie-detail {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  color: $font-primary;
+  .loading-text {
+    margin-inline: auto;
+    font-size: 2.5rem;
+    margin-block: 15rem;
+  }
+  .container {
+    color: $font-primary;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    padding-block: 10rem;
+
+    .left-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 1.5rem;
+
+      h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $font-primary;
+      }
+
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        h5 {
+          color: $font-secondary;
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          .rating-icon {
+            color: orange;
+          }
+
+          .vote-icon {
+            color: $font-primary;
+          }
+
+          .runtime-icon {
+            color: rgb(200, 200, 200);
+          }
+
+          .year-icon {
+            color: peru;
+          }
+        }
+      }
+
+      .plot {
+        p {
+          font-size: large;
+          text-align: left;
+          line-height: 1.6;
+          color: $font-primary;
+        }
+      }
+
+      .short-info {
+        font-size: large;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h4 {
+          font-weight: 500;
+          color: $font-primary;
+          .span-blue {
+            color: $font-secondary;
+          }
+        }
+      }
+    }
+
+    .right-container {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: all 0.5s ease;
+      }
+      img:hover {
+        box-shadow: 0 0 10px 5px rgba(244, 244, 244, 0.912);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-detail {
+    padding-block: 2rem;
+    .container {
+      padding-block: 2rem;
+      margin-inline: 2rem;
+      flex-direction: column;
+
+      .left-container {
+        width: 100%;
+
+        order: 1;
+        margin-block: 2rem;
+
+        .stats {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
